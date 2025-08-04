@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Creates a security group that allows SSH access
+
+Parameters:
+  SSHLocation:
+    Type: String
+    Description: The IP range for SSH access
+
+Resources:
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: !Ref SSHLocation
+
+Outputs:
+  SecurityGroupId:
+    Description: The ID of the created Security Group
+    Value: !Ref InstanceSecurityGroup
