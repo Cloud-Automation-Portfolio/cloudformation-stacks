@@ -122,7 +122,7 @@ A full AWS CloudFormation automation lab that:
 | 4    | nested_stack_console.png         | Nested stack view in AWS Console           |
 | 5    | stackset_multi_region.png        | StackSet deployed to multiple regions      |
 | 5    | stack_success.png                | Stack instance with SUCCEEDED status       |
-| X    | template_editor.png              | Template editor view                       |
+| -    | template_editor.png              | Template editor view                       |
 
 ---
 
